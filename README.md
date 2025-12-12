@@ -2,6 +2,8 @@
 
 > This is a **Sanity Studio v4** plugin.
 
+> ⚠️ **Note:** This is a fork of [sanity-plugin-icon-picker](https://github.com/christopherafbjur/sanity-plugin-icon-picker) that has been upgraded to support Sanity Studio v4 and uses Bun. The original package supports Sanity Studio v3.
+
 Icon picker for Sanity which let you select icons from a set of icon providers.
 
 ![image](https://github.com/christopherafbjur/sanity-plugin-icon-picker/blob/main/promo.png?raw=true)
@@ -9,13 +11,13 @@ Icon picker for Sanity which let you select icons from a set of icon providers.
 ## Installation
 
 ```sh
-bun add sanity-plugin-icon-picker
+bun add @psoldunov/sanity-plugin-icon-picker
 ```
 
 Or with npm:
 
 ```sh
-npm install sanity-plugin-icon-picker
+npm install @psoldunov/sanity-plugin-icon-picker
 ```
 
 ## Usage
@@ -24,7 +26,7 @@ Add it as a plugin in `sanity.config.ts` (or .js):
 
 ```ts
 import { defineConfig } from 'sanity';
-import { iconPicker } from 'sanity-plugin-icon-picker';
+import { iconPicker } from '@psoldunov/sanity-plugin-icon-picker';
 
 export default defineConfig({
   //...
@@ -164,7 +166,7 @@ import * as CarbonIcons from '@carbon/icons-react'
 In order to render the icon component as preview media, we can import a helper method.
 
 ```js
-import { preview } from 'sanity-plugin-icon-picker';
+import { preview } from '@psoldunov/sanity-plugin-icon-picker';
 ```
 
 We can then render the icon by passing the selected name and provider to this method which will return an icon component.
@@ -194,7 +196,7 @@ If you're using your own [configurations](https://github.com/christopherafbjur/s
 
 ```js
 import React from 'react';
-import { preview } from 'sanity-plugin-icon-picker';
+import { preview } from '@psoldunov/sanity-plugin-icon-picker';
 import * as CarbonIcons from '@carbon/icons-react';
 
 const options = {
@@ -245,7 +247,7 @@ export const schemaTypes = [
 ### Migrations
 
 ```js
-import { migrateIconName } from 'sanity-plugin-icon-picker';
+import { migrateIconName } from '@psoldunov/sanity-plugin-icon-picker';
 ```
 
 We can use this function to migrate the name to a new `outputFormat`. This can be useful if you added icons in your studio and later decide that you want to use another `outputFormat`. Pass the third parameter `react` if you want to convert the name to `options.outputFormat: 'react'` naming convention. If you want to convert from `react` to default simply leave out the third parameter. Here's an [example of a migration script](https://gist.github.com/christopherafbjur/39e33e914de292fe8b5ae5cbc2ab82aa) where this function might come in handy.

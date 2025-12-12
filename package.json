@@ -1,5 +1,5 @@
 {
-  "name": "sanity-plugin-icon-picker",
+  "name": "@psoldunov/sanity-plugin-icon-picker",
   "version": "4.0.0",
   "description": "An Icon Picker plugin for Sanity",
   "keywords": [
