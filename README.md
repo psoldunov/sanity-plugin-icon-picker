@@ -1,12 +1,18 @@
 # sanity-plugin-icon-picker
 
-> This is a **Sanity Studio v3** plugin.
+> This is a **Sanity Studio v4** plugin.
 
 Icon picker for Sanity which let you select icons from a set of icon providers.
 
 ![image](https://github.com/christopherafbjur/sanity-plugin-icon-picker/blob/main/promo.png?raw=true)
 
 ## Installation
+
+```sh
+bun add sanity-plugin-icon-picker
+```
+
+Or with npm:
 
 ```sh
 npm install sanity-plugin-icon-picker
